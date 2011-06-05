@@ -14,6 +14,9 @@
 #+LINK_HOME: 
 #+XSLT: 
 * 从制作金卡,降级官方rom,获得root,radio s-off,eng s-off,clockworkmod到刷第三方rom
+** 声明
+   你最好可以看一下我给出的参考网址.
+   Please follow this guide at your own risk. I  will not be liable if your device gets damaged or bricked during the process.
 ** 需要
    - 一台装着linux系统的电脑,我装的是debian.
    - 一台2011年4月生产的港行htc desire hd a9191 g10.

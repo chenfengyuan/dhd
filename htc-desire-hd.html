@@ -4,13 +4,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 lang="en" xml:lang="en">
 <head>
-<title>htc-desire-hd.org</title>
+<title>htc-desire-hd</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2011-06-05 Sun"/>
-<meta name="author" content="chenfengyuan"/>
+<meta name="generated" content="2011-08-16 23:17:35 CST"/>
+<meta name="author" content="cfy"/>
 <meta name="description" content=""/>
-<meta name="keywords" content="htc desire hd"/>
+<meta name="keywords" content=""/>
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   html { font-family: Times, serif; font-size: 12pt; }
@@ -21,6 +21,9 @@ lang="en" xml:lang="en">
   .target { }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
   p.verse { margin-left: 3% }
   pre {
 	border: 1pt solid #AEBDCC;
@@ -31,7 +34,13 @@ lang="en" xml:lang="en">
         overflow:auto;
   }
   table { border-collapse: collapse; }
-  td, th { vertical-align: top; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
   dt { font-weight: bold; }
   div.figure { padding: 0.5em; }
   div.figure p { text-align: center; }
@@ -67,12 +76,12 @@ lang="en" xml:lang="en">
  }
 /*]]>*///-->
 </script>
+
 </head>
 <body>
 <div id="content">
 
-<h1 class="title">htc-desire-hd.org</h1>
-
+<h1 class="title">htc-desire-hd</h1>
 
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
@@ -80,11 +89,19 @@ lang="en" xml:lang="en">
 <ul>
 <li><a href="#sec-1">1 从制作金卡,降级官方rom,获得root,radio s-off,eng s-off,clockworkmod到刷第三方rom </a>
 <ul>
-<li><a href="#sec-1_1">1.1 声明 </a></li>
-<li><a href="#sec-1_2">1.2 需要 </a></li>
-<li><a href="#sec-1_3">1.3 参考网址 </a></li>
-<li><a href="#sec-1_4">1.4 下载地址 </a></li>
-<li><a href="#sec-1_5">1.5 开始: </a></li>
+<li><a href="#sec-1-1">1.1 需要 </a></li>
+<li><a href="#sec-1-2">1.2 参考网址 </a></li>
+<li><a href="#sec-1-3">1.3 下载地址 </a></li>
+<li><a href="#sec-1-4">1.4 开始: </a>
+<ul>
+<li><a href="#sec-1-4-1">1.4.1 制作金卡: </a></li>
+<li><a href="#sec-1-4-2">1.4.2 Downgrade HTC Desire HD(降级dhd) </a></li>
+<li><a href="#sec-1-4-3">1.4.3 获得root. </a></li>
+<li><a href="#sec-1-4-4">1.4.4 获得eng s-off: </a></li>
+<li><a href="#sec-1-4-5">1.4.5 安装clockworkmod </a></li>
+<li><a href="#sec-1-4-6">1.4.6 刷3rd party rom </a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -98,210 +115,283 @@ lang="en" xml:lang="en">
 
 </div>
 
-<div id="outline-container-1_1" class="outline-3">
-<h3 id="sec-1_1"><span class="section-number-3">1.1</span> 声明 </h3>
-<div class="outline-text-3" id="text-1_1">
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 需要 </h3>
+<div class="outline-text-3" id="text-1-1">
 
-<p>你最好可以看一下我给出的参考网址.
-Please follow this guide at your own risk. I  will not be liable if your device gets damaged or bricked during the process.
-</p></div>
+<ul>
+<li>一台装着linux系统的电脑,我装的是debian.
+</li>
+<li>一台2011年4月生产的港行htc desire hd a9191 g10.
+</li>
+<li>microSD卡(貌似也叫TF卡)一张,大小几百M以上,最好是质量好的卡.
+</li>
+</ul>
 
 </div>
 
-<div id="outline-container-1_2" class="outline-3">
-<h3 id="sec-1_2"><span class="section-number-3">1.2</span> 需要 </h3>
-<div class="outline-text-3" id="text-1_2">
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 参考网址 </h3>
+<div class="outline-text-3" id="text-1-2">
 
 <ul>
-<li>
-一台装着linux系统的电脑,我装的是debian.
+<li><a href="http://www.addictivetips.com/mobile/how-to-make-gold-card-for-htc-desire-hd">制作金卡</a>
 </li>
-<li>
-一台2011年4月生产的港行htc desire hd a9191 g10.
+<li><a href="http://www.addictivetips.com/mobile/how-to-downgrade-htc-desire-hd-to-root-it-after-ota-update/">降级</a>
 </li>
-<li>
-microSD卡(貌似也叫TF卡)一张,大小几百M以上,最好是质量好的卡.
+<li><a href="http://www.addictivetips.com/mobile/how-to-gain-s-off-radio-and-engineering-on-htc-desire-hd/">获得root,radio s-off,engineerning s-off</a>
+</li>
+<li><a href="http://www.miui.com/a-62.html">miui.com的htc desire hd刷机教程</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> 下载地址 </h3>
+<div class="outline-text-3" id="text-1-3">
+
+<ul>
+<li><a href="http://android.d3xt3r01.tk/cyanogen/ace/stock/1.32.405.6/PD98IMG.zip">1.32 rom</a> 或者 <a href="ftp://vps/dhd/PD98IMG.zip">1.32 rom</a> 
+     sha512sum: 473f8b3b574d1a050fd9bb14b894f4d9641e922ee2018dce7024051c610a08f7cc44aea5d27fe6ff8326daf3e0fbae57a70273600d4a2392d1780e97b5021424
+</li>
+<li><a href="http://www.addictivetips.com/?attachment_id=46640">Desire HD S-OFF Toolkit</a> 或者 <a href="ftp://184.82.41.44/dhd/DHD_S-OFF_Toolkit.zip">Desire HD S-OFF Toolkit</a>
+     sha512sum: a5c897c5dd54757014d2747eff384634f26a22f582980302bd647d9f0817f99aa1c32be2530ff2839268ed6e6115144795bf7d0fddbacbfcfabeffe45ed6372b
+</li>
+<li><a href="http://www.addictivetips.com/?attachment_id=44625">Engineering HBoot for HTC Desire HD</a> 或者<a href="ftp://184.82.41.44/dhd/DHD_MT4G-eng-hboot.zip"> engineering hboot for htc desire hd</a>
+     sha512sum d69e19f84b1f5111f163b17b20d2cf94616b552a026c4335eb9be8c576fc9ce8da1890f52dcd214c6a20893a7f8b5bd3d147e6deef7aff1a9d6b19163bb641c5
+</li>
+<li><a href="http://cfy.googlecode.com/files/dhd_tools_110603.zip">dhd tools 110603.zip</a>
+     或者 <a href="ftp://184.82.41.44/dhd/dhd_tools_110603.zip">dhd tools 110603.zip</a>
+     SHA1 Checksum:      e3711a6994c3f0ec6e2744af1f2027814df0a8d6
+     ps:值得注意的是,这个包我是在 <a href="http://www.miui.com/a-62.html">这里</a> 下的.不过他们给的md5sum我无法验证成功.所以你看我给的sha1sum好了.
+</li>
+<li><a href="http://www.miui.com/download.html">miui rom</a>
+     选择HTC HD 下载专区
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> 开始: </h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+</div>
+
+<div id="outline-container-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> 制作金卡: </h4>
+<div class="outline-text-4" id="text-1-4-1">
+
+<ul>
+<li id="sec-1-4-1-1">在软件市场里安装GoldCard Helper(不是goldCard).然后让它装进行第二步. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-2">把卡装入手机,进行格式化. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-3">等到GoldCard Helper安装好,打开GoldCard Helper,记下Card:mmc2, Reverse CID的内容(这个内容是一长串的16进制的串,由数字和a,b,c,d,e,f组成,所以如果你看到O,o,0,0啥的只可能是数字0) <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-4">打开浏览器(推荐在debian上打开opera),打开这个网站<a href="http://psas.revskills.de/?q=goldcard">Free HTC goldcard generator</a>,输入两遍你的email地址(我用的是gmail,请确保你用的能用的邮箱,不要是啥号注册来然后附赠的垃圾邮箱!!!如果你不能用gmail,可以试试163的邮箱),然后再填入刚刚记下的Card:mmc2, Reverse CID的内容.在Select goldcard type:里选择android.最后填入code(网站防止xxx用的code,根据图片填),然后按'Generate Goldcard!' <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-5">登陆你的邮箱(我是gmail),你会收到一封邮件(在写这个教程的时候,gmail又被封了,fuck!!!是谁干的呢?你懂的&hellip;.)里面有个附件goldcard.img.,下载下来.放到你找得到的地方 <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6">下面几步都在debian里操作: <br/>
+<ul>
+<li id="sec-1-4-1-6-1">变成root <br/>
+
+
+
+<pre class="example">su - 
+
+</pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6-2">看下目前插入介质的最后序号是多少,一般是sda,我这里由于已经插了一个U盘,现实的是sdb <br/>
+
+
+
+<pre class="example">$ \ls /dev/sd*|perl -pe 's/\d//g'|sort|uniq|tail -n 1 
+
+</pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6-3">这步不是打命令了,取出你的sd卡(你的卡刚刚在手机里格式化过了)插入debian,或者手机的usb模式里选择存储模式之类的,然后usb连接debian(我是usb连接的.插入或者连上之后,等一下,等几秒吧. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6-4">看下,只要出来的内容和刚刚第二步的不一样即可.我这里由于已经插了一个U盘,所以显示的是sdc.如果结果和第二步出来的一样,停下来.再等一下,再执行第四步的命令.如果仍然一样,千万不可继续下去.联系我&hellip; <br/>
+
+
+
+<pre class="example">$ \ls /dev/sd*|perl -pe 's/\d//g'|sort|uniq|tail -n 1 
+
+</pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6-5">这步里,你需要把刚才下载的goldcard.img复制到/dev/shm/下面. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6-6">然后dd if=/dev/shm/goldcard.img of=/dev/sdc #我这里是sdc,你需要填和第四步出来的结果(注意这个结果必须和第二步出来的不一样的!!) <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6-7">同步一下介质的内容 <br/>
+
+
+
+<pre class="example">sync
+
+</pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6-8">取出microsd卡或者断开usb连接 <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6-9">然后在手机里看下,如果micro卡能挂载(换句话说是能使用)基本说明制作成功了,如果不是,别往下了&hellip;检查一下前面的步骤有没有做错,还是不行,那联系我&hellip;. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-1-6-10">金卡做好了.准备downgrade官方的rom:) <br/>
+</li>
+</ul>
 </li>
 </ul>
 </div>
 
 </div>
 
-<div id="outline-container-1_3" class="outline-3">
-<h3 id="sec-1_3"><span class="section-number-3">1.3</span> 参考网址 </h3>
-<div class="outline-text-3" id="text-1_3">
+<div id="outline-container-1-4-2" class="outline-4">
+<h4 id="sec-1-4-2"><span class="section-number-4">1.4.2</span> Downgrade HTC Desire HD(降级dhd) </h4>
+<div class="outline-text-4" id="text-1-4-2">
 
 <ul>
-<li>
-<a href="http://www.addictivetips.com/mobile/how-to-make-gold-card-for-htc-desire-hd">制作金卡</a>
-</li>
-<li>
-<a href="http://www.addictivetips.com/mobile/how-to-downgrade-htc-desire-hd-to-root-it-after-ota-update/">降级</a>
-</li>
-<li>
-<a href="http://www.addictivetips.com/mobile/how-to-gain-s-off-radio-and-engineering-on-htc-desire-hd/">获得root,radio s-off,engineerning s-off</a>
-</li>
-<li>
-<a href="http://www.miui.com/a-62.html">miui.com的htc desire hd刷机教程</a>
+<li id="sec-1-4-2-1">在debian里安装好adb. <br/>
 </li>
 </ul>
-</div>
-
-</div>
-
-<div id="outline-container-1_4" class="outline-3">
-<h3 id="sec-1_4"><span class="section-number-3">1.4</span> 下载地址 </h3>
-<div class="outline-text-3" id="text-1_4">
-
 <ul>
-<li>
-<a href="http://android.d3xt3r01.tk/cyanogen/ace/stock/1.32.405.6/PD98IMG.zip">1.32 rom</a> 或者 <a href="ftp://vps/dhd/PD98IMG.zip">1.32 rom</a> 
-sha512sum: 473f8b3b574d1a050fd9bb14b894f4d9641e922ee2018dce7024051c610a08f7cc44aea5d27fe6ff8326daf3e0fbae57a70273600d4a2392d1780e97b5021424
-</li>
-<li>
-<a href="http://www.addictivetips.com/?attachment_id=46640">Desire HD S-OFF Toolkit</a> 或者 <a href="ftp://184.82.41.44/dhd/DHD_S-OFF_Toolkit.zip">Desire HD S-OFF Toolkit</a>
-sha512sum: a5c897c5dd54757014d2747eff384634f26a22f582980302bd647d9f0817f99aa1c32be2530ff2839268ed6e6115144795bf7d0fddbacbfcfabeffe45ed6372b
-</li>
-<li>
-<a href="http://www.addictivetips.com/?attachment_id=44625">Engineering HBoot for HTC Desire HD</a> 或者<a href="ftp://184.82.41.44/dhd/DHD_MT4G-eng-hboot.zip"> engineering hboot for htc desire hd</a>
-sha512sum d69e19f84b1f5111f163b17b20d2cf94616b552a026c4335eb9be8c576fc9ce8da1890f52dcd214c6a20893a7f8b5bd3d147e6deef7aff1a9d6b19163bb641c5
-</li>
-<li>
-<a href="http://cfy.googlecode.com/files/dhd_tools_110603.zip">dhd tools 110603.zip</a>
-或者 <a href="ftp://184.82.41.44/dhd/dhd_tools_110603.zip">dhd tools 110603.zip</a>
-SHA1 Checksum:      e3711a6994c3f0ec6e2744af1f2027814df0a8d6
-ps:值得注意的是,这个包我是在 <a href="http://www.miui.com/a-62.html">这里</a> 下的.不过他们给的md5sum我无法验证成功.所以你看我给的sha1sum好了.
-</li>
-<li>
-<a href="http://www.miui.com/download.html">miui rom</a>
-选择HTC HD 下载专区
+<li id="sec-1-4-2-2">下载 Downgrade.zip <br/>
 </li>
 </ul>
-</div>
+<ul>
+<li id="sec-1-4-2-3">在手机中打开usb的debugging模式(Settings &gt; Applications &gt; Development.) <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-2-4">把你的手机通过usb连上debian. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-2-5">解压Downgrade.zip,然后终端里su以后,cd到解压出来的文件夹中执行 <br/>
 
-</div>
 
-<div id="outline-container-1_5" class="outline-3">
-<h3 id="sec-1_5"><span class="section-number-3">1.5</span> 开始: </h3>
-<div class="outline-text-3" id="text-1_5">
 
-<ol>
-<li>
-制作金卡:
-<ol>
-<li>
-在软件市场里安装GoldCard Helper(不是goldCard).然后让它装进行第二步.
-</li>
-<li>
-把卡装入手机,进行格式化.
-</li>
-<li>
-等到GoldCard Helper安装好,打开GoldCard Helper,记下Card:mmc2, Reverse CID的内容(这个内容是一长串的16进制的串,由数字和a,b,c,d,e,f组成,所以如果你看到O,o,0,0啥的只可能是数字0)
-</li>
-<li>
-打开浏览器(推荐在debian上打开opera),打开这个网站<a href="http://psas.revskills.de/?q=goldcard">Free HTC goldcard generator</a>,输入两遍你的email地址(我用的是gmail,请确保你用的能用的邮箱,不要是啥号注册来然后附赠的垃圾邮箱!!!如果你不能用gmail,可以试试163的邮箱),然后再填入刚刚记下的Card:mmc2, Reverse CID的内容.在Select goldcard type:里选择android.最后填入code(网站防止xxx用的code,根据图片填),然后按'Generate Goldcard!'
-</li>
-<li>
-登陆你的邮箱(我是gmail),你会收到一封邮件(在写这个教程的时候,gmail又被封了,fuck!!!是谁干的呢?你懂的&hellip;.)里面有个附件goldcard.img.,下载下来.放到你找得到的地方
-</li>
-<li>
-下面几步都在debian里操作,#号后面是注释,不过即使你照样输入了,也没事:):
-<ol>
-<li>
-su - #变成root
-</li>
-<li>
-\ls <i>dev/sd*|perl -pe 's</i>\d//g'|sort|uniq|tail -n 1 #看下目前插入介质的最后序号是多少,一般是sda,我这里由于已经插了一个U盘,现实的是sdb
-</li>
-<li>
-#这步不是打命令了,取出你的sd卡(你的卡刚刚在手机里格式化过了)插入debian,或者手机的usb模式里选择存储模式之类的,然后usb连接debian(我是usb连接的.插入或者连上之后,等一下,等几秒吧.
-</li>
-<li>
-\ls <i>dev/sd*|perl -pe 's</i>\d//g'|sort|uniq|tail -n 1 #看下,只要出来的内容和刚刚第二步的不一样即可.我这里由于已经插了一个U盘,所以显示的是sdc.如果结果和第二步出来的一样,停下来.再等一下,再执行第四步的命令.如果仍然一样,千万不可继续下去.联系我&hellip;
-</li>
-<li>
-#这步里,你需要把刚才下载的goldcard.img复制到/dev/shm/下面.
-</li>
-<li>
-然后dd if=/dev/shm/goldcard.img of=/dev/sdc #我这里是sdc,你需要填和第四步出来的结果(注意这个结果必须和第二步出来的不一样的!!)
-</li>
-<li>
-sync #同步一下介质的内容
-</li>
-</ol>
-</li>
-<li>
-取出microsd卡或者断开usb连接
-</li>
-<li>
-然后在手机里看下,如果micro卡能挂载(换句话说是能使用)基本说明制作成功了,如果不是,别往下了&hellip;检查一下前面的步骤有没有做错,还是不行,那联系我&hellip;.
-</li>
-<li>
-金卡做好了.准备downgrade官方的rom:)
-</li>
-</ol>
-</li>
-<li>
-Downgrade HTC Desire HD(降级dhd)
-<ol>
-<li>
-在debian里安装好adb.
-</li>
-<li>
-下载 Downgrade.zip
-</li>
-<li>
-在手机中打开usb的debugging模式(Settings &gt; Applications &gt; Development.)
-</li>
-<li>
-把你的手机通过usb连上debian.
-</li>
-<li>
-解压Downgrade.zip,然后终端里su以后,cd到解压出来的文件夹中执行
-adb push psneuter /data/local/tmp
-adb push misc<sub>version</sub> /data/local/tmp
+<pre class="example">adb push psneuter /data/local/tmp
+adb push misc_version /data/local/tmp
 adb shell chmod 777 /data/local/tmp/psneuter
-adb shell chmod 777 /data/local/tmp/misc<sub>version</sub>
+adb shell chmod 777 /data/local/tmp/misc_version
 adb shell /data/local/tmp/psneuter
 adb shell
+
+</pre>
+
+
+
 </li>
-<li>
-这时候提示符应该显示为#了.表示temporary root了
+</ul>
+<ul>
+<li id="sec-1-4-2-6">这时候提示符应该显示为#了.表示temporary root了 <br/>
 </li>
-<li>
-然后再输入
-cd /data/local/tmp
-./misc<sub>version</sub> -s 1.31.405.6
+</ul>
+<ul>
+<li id="sec-1-4-2-7">然后再输入 <br/>
+
+
+
+<pre class="example">cd /data/local/tmp
+./misc_version -s 1.31.405.6
+
+</pre>
+
+
+
 </li>
-<li>
-把PD98IMG.zip放在你sd卡的根目录下(不要在任何目录下).
+</ul>
+<ul>
+<li id="sec-1-4-2-8">把PD98IMG.zip放在你sd卡的根目录下(不要在任何目录下). <br/>
 </li>
-<li>
-插入卡,关闭手机.按住 音量- 和 电源键,然后根据提示完成降级.
+</ul>
+<ul>
+<li id="sec-1-4-2-9">插入卡,关闭手机.按住 音量- 和 电源键,然后根据提示完成降级. <br/>
 </li>
-<li>
-降级完成,可以用以前的那些方法获得root了.请往下看
+</ul>
+<ul>
+<li id="sec-1-4-2-10">降级完成,可以用以前的那些方法获得root了.请往下看 <br/>
 </li>
-</ol>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1-4-3" class="outline-4">
+<h4 id="sec-1-4-3"><span class="section-number-4">1.4.3</span> 获得root. </h4>
+<div class="outline-text-4" id="text-1-4-3">
+
+<ul>
+<li id="sec-1-4-3-1">在手机里的软件市场里,安装Terminal Emulator <br/>
 </li>
-<li>
-获得root.
-<ol>
-<li>
-在手机里的软件市场里,安装Terminal Emulator
+</ul>
+<ul>
+<li id="sec-1-4-3-2">下载 Desire HD S-OFF Toolkit <br/>
 </li>
-<li>
-下载 Desire HD S-OFF Toolkit
+</ul>
+<ul>
+<li id="sec-1-4-3-3">在手机里打开usb debugging模式(Settings &gt; Applications &gt; Development.) <br/>
 </li>
-<li>
-在手机里打开usb debugging模式(Settings &gt; Applications &gt; Development.)
+</ul>
+<ul>
+<li id="sec-1-4-3-4">通过usb,把手机和电脑连起来. <br/>
 </li>
-<li>
-通过usb,把手机和电脑连起来.
-</li>
-<li>
-在debian里打开终端
-adb push su /sdcard/su
+</ul>
+<ul>
+<li id="sec-1-4-3-5">在debian里打开终端 <br/>
+
+
+
+<pre class="example">adb push su /sdcard/su
 adb push Superuser.apk /sdcard/Superuser.apk
 adb push rage /data/local/tmp/rage
 adb push busybox /data/local/tmp/busybox
@@ -309,145 +399,222 @@ adb push root /data/local/tmp/root
 adb push gfree /data/local
 adb shell chmod 0755 /data/local/tmp/*
 adb shell chmod 777 /data/local/gfree
+
+</pre>
+
+
+
 </li>
-<li>
-打开手机里安装好的terminal Emulator,输入一下内容
-/data/local/tmp/rage
+</ul>
+<ul>
+<li id="sec-1-4-3-6">打开手机里安装好的terminal Emulator,输入一下内容 <br/>
+
+
+
+<pre class="example">/data/local/tmp/rage
+
+</pre>
+
+
+
 </li>
-<li>
-等待,知道你看到了 Forked #### childs 的内容,这时候按menu,然后选择reset term.
+</ul>
+<ul>
+<li id="sec-1-4-3-7">等待,知道你看到了 Forked #### childs 的内容,这时候按menu,然后选择reset term. <br/>
 </li>
-<li>
-手机上:再打开terminal emultor,应该这时候是被强制关闭的.再打开一次.提示符$应该变成了#了.
+</ul>
+<ul>
+<li id="sec-1-4-3-8">手机上:再打开terminal emultor,应该这时候是被强制关闭的.再打开一次.提示符$应该变成了#了. <br/>
 </li>
-<li>
-手机上:在打开的终端里输入以下内容(如果提示了 mkdir: /system/xbin already exists,忽略它.继续往下做):
-/data/local/gfree -f
+</ul>
+<ul>
+<li id="sec-1-4-3-9">手机上:在打开的终端里输入以下内容(如果提示了 mkdir: /system/xbin already exists,忽略它.继续往下做): <br/>
+
+
+
+<pre class="example">/data/local/gfree -f
 sync
 /data/local/tmp/root
 sync
-</li>
-<li>
-最后一个sync完成之后(看到了一个#),重启手机.
-</li>
-<li>
-radio s-off完成了:)
-</li>
-</ol>
-</li>
-<li>
-获得eng s-off:
-<ol>
-<li>
-下载Engineering HBoot for HTC Desire HD
-</li>
-<li>
-解压它,里面有个hboot-eng.img,cd到解压目录.
-</li>
-<li>
-adb push hboot-eng.img /data/local
-</li>
-<li>
-手机上:打开 terminal emulator
-su
-dd if=/data/local/hboot-eng.img of=/dev/block/mmcblk0p18
-</li>
-<li>
-好了你已经获得了eng s-off
-</li>
-</ol>
-</li>
-<li>
-安装clockworkmod
-<ol>
-<li>
-下载dhd<sub>tools</sub>.zip,解压dhd<sub>tools</sub>.zip,解压密码miui.
-</li>
-<li>
-手机上:关机.按住 音量- 和 电源键开机,进入hboot模式,选择进入fastboot.用usb线,将手机和电脑连接起来.
-</li>
-<li>
-在debian上:
-cd <i>path/to/解压目录</i>
-chmod a+x tools/fastboot-linux
-sh install-recovery-linux.sh
-</li>
-<li>
-应该出现三个okay字样.
-</li>
-<li>
-已经好了.可以关机.按住 音量- 和 电源进入hboot,
-</li>
-<li>
-选择recovery,进入.
-</li>
-<li>
-这时可以看到最上面一行有clockworkmod 字样,表示安装clockworkmod成功了:)
-</li>
-</ol>
-</li>
-<li>
-刷3rd party rom
-<ol>
-<li>
-将rom放在microsd卡的根目录下(即不在任何子目录下).
-</li>
-<li>
-用前面的方法进入recovery(clockworkmod)
-</li>
-<li>
-还是用音量键选择,电源键来确认.选择
-<ol>
-<li>
-wipe data/factory reset
-</li>
-<li>
-yes &ndash; delete all user data
-</li>
-<li>
-wipe cache partition
-</li>
-<li>
-yes &ndash; wipe cache
-</li>
-<li>
-install zip from sdcard
-</li>
-<li>
-choose zip from sdcard
-</li>
-<li>
-选择某个以zip为后缀的文件.
-</li>
-<li>
-yes - install xxxxxx.zip
-</li>
-<li>
-返回
-</li>
-<li>
-reboot system now
-</li>
-</ol>
-</li>
-<li>
-系统重启以后,你就看可以看到刚刚刷的rom了;)
-</li>
-<li>
-happying hacking
+
+</pre>
+
+
 
 </li>
-</ol>
+</ul>
+<ul>
+<li id="sec-1-4-3-10">最后一个sync完成之后(看到了一个#),重启手机. <br/>
 </li>
-</ol>
+</ul>
+<ul>
+<li id="sec-1-4-3-11">radio s-off完成了:) <br/>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1-4-4" class="outline-4">
+<h4 id="sec-1-4-4"><span class="section-number-4">1.4.4</span> 获得eng s-off: </h4>
+<div class="outline-text-4" id="text-1-4-4">
+
+<ul>
+<li id="sec-1-4-4-1">下载Engineering HBoot for HTC Desire HD <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-4-2">解压它,里面有个hboot-eng.img,cd到解压目录. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-4-3">adb push hboot-eng.img /data/local <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-4-4">手机上:打开 terminal emulator <br/>
+
+
+
+<pre class="example">su
+dd if=/data/local/hboot-eng.img of=/dev/block/mmcblk0p18
+
+</pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-4-5">好了你已经获得了eng s-off <br/>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1-4-5" class="outline-4">
+<h4 id="sec-1-4-5"><span class="section-number-4">1.4.5</span> 安装clockworkmod </h4>
+<div class="outline-text-4" id="text-1-4-5">
+
+<ul>
+<li id="sec-1-4-5-1">下载dhd_tools.zip,解压dhd_tools.zip,解压密码miui. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-5-2">手机上:关机.按住 音量- 和 电源键开机,进入hboot模式,选择进入fastboot.用usb线,将手机和电脑连接起来. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-5-3">在debian上: <br/>
+
+
+
+<pre class="example">cd /path/to/解压目录/
+chmod a+x tools/fastboot-linux
+sh install-recovery-linux.sh
+
+</pre>
+
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-5-4">应该出现三个okay字样. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-5-5">已经好了.可以关机.按住 音量- 和 电源进入hboot, <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-5-6">选择recovery,进入. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-5-7">这时可以看到最上面一行有clockworkmod 字样,表示安装clockworkmod成功了:) <br/>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1-4-6" class="outline-4">
+<h4 id="sec-1-4-6"><span class="section-number-4">1.4.6</span> 刷3rd party rom </h4>
+<div class="outline-text-4" id="text-1-4-6">
+
+<ul>
+<li id="sec-1-4-6-1">将rom放在microsd卡的根目录下(即不在任何子目录下). <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-2">用前面的方法进入recovery(clockworkmod) <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3">还是用音量键选择,电源键来确认.选择 <br/>
+<ul>
+<li id="sec-1-4-6-3-1">wipe data/factory reset <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3-2">yes &ndash; delete all user data <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3-3">wipe cache partition <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3-4">yes &ndash; wipe cache <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3-5">install zip from sdcard <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3-6">choose zip from sdcard <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3-7">选择某个以zip为后缀的文件. <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3-8">yes - install xxxxxx.zip <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3-9">返回 <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-3-10">reboot system now <br/>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-4">系统重启以后,你就看可以看到刚刚刷的rom了;) <br/>
+</li>
+</ul>
+<ul>
+<li id="sec-1-4-6-5">happying hacking <br/>
+
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble">
-<p class="author"> Author: chenfengyuan
-</p>
-<p class="date"> Date: 2011-06-05 Sun</p>
-<p class="creator">HTML generated by org-mode TAG=7.01g in emacs 23</p>
+<p class="date">Date: 2011-08-16 23:17:35 CST</p>
+<p class="author">Author: cfy</p>
+<p class="email"><a href="mailto:jeova.sanctus.unus+html@gmail.com">jeova.sanctus.unus+html@gmail.com</a></p>
+<p class="creator">Org version 7.6 with Emacs version 23</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 </div>
 </div>
 </body>
